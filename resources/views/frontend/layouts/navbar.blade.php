@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-black fixed-top">
+<nav class="navbar navbar-expand-lg bg-dark fixed-top">
     <div class="container d-flex justify-content-center">
         <header class="d-flex justify-content-center py-3">
             <ul class="nav">

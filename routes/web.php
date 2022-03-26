@@ -14,3 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[\App\Http\Controllers\FrontendController::class,'index'])->name('frontend.index');
+Route::get('/menu',[\App\Http\Controllers\FrontendController::class,'menu'])->name('frontend.menu');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

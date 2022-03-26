@@ -11,4 +11,8 @@ class FrontendController extends Controller
     {
         return view('frontend.index');
     }
+    public function menu(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('frontend.menu');
+    }
 }
