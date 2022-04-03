@@ -16,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[\App\Http\Controllers\FrontendController::class,'index'])->name('frontend.index');
 Route::get('/menu',[\App\Http\Controllers\FrontendController::class,'menu'])->name('frontend.menu');
 
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/dashboard',[\App\Http\Controllers\DashboardController::class,'dashboard'])->name('admin.dashboard');
+    Route::get('orders',[\App\Http\Controllers\DashboardController::class,'orders'])->name('admin.orders');
+    Route::get('products',[\App\Http\Controllers\DashboardController::class,'products'])->name('admin.products');
+    Route::get('users',[\App\Http\Controllers\DashboardController::class,'users'])->name('admin.users');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
